@@ -10,6 +10,7 @@ https://northamerica-northeast1-eventstream-dev.cloudfunctions.net/random2?list=
 ```
 {key: 1, value: second}
 ```
+code : https://console.cloud.google.com/functions/details/northamerica-northeast1/random2?hl=en&project=eventstream-dev&supportedpurview=project
 ## Setup
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - key off https://github.com/obrienlabs/magellan/blob/master/magellan-nbi/src/main/java/global/packet/magellan/integration/RestClient.java#L39
