@@ -1,5 +1,5 @@
 # rest-client-java
-A java SE REST client - JDK 11+ required
+A java SE REST client - JDK 11+ required on both PATH and JAVA_HOME (for maven)
 
 ## Setup
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
