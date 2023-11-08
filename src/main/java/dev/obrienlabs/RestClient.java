@@ -29,7 +29,8 @@ public class RestClient {
 		
 	private static final String URL_CREATE_RECORD =
 	//            "http://biometric.elasticbeanstalk.com/FrontController?action=activeid";
-    "https://obrienlabs.dev/rest-json.html";
+    //"https://obrienlabs.dev/rest-json.html";
+	"https://northamerica-northeast1-eventstream-dev.cloudfunctions.net/random2?list=first,second,third,forth";
     
 	public static void restCall() {		
 		HttpRequest request = HttpRequest.newBuilder()
