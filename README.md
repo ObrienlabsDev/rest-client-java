@@ -1,6 +1,15 @@
 # rest-client-java
 A java SE REST client - JDK 11+ required on both PATH and JAVA_HOME (for maven)
 
+## Google Cloud Functions - HTTPS endpoint
+
+-Use the following GCP Google Cloud Functions V2 https endpoint (org: oldev - proj: dev/eventstream-dev
+-list parameter is input into a random selector
+
+https://northamerica-northeast1-eventstream-dev.cloudfunctions.net/random2?list=first,second,third,forth
+
+{key: 1, value: second}
+
 ## Setup
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - key off https://github.com/obrienlabs/magellan/blob/master/magellan-nbi/src/main/java/global/packet/magellan/integration/RestClient.java#L39
