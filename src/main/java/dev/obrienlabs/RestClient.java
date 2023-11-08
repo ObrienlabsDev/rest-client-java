@@ -17,7 +17,8 @@ import java.time.Duration;
 import java.util.logging.Logger;
 
 /**
- * Hello world!
+ * 20231107: Java 11 SE REST client
+ * @author michaelobrien
  *
  */
 public class RestClient {
@@ -27,20 +28,15 @@ public class RestClient {
 	static Logger logger = Logger.getLogger(RestClient.class.getName());
 		
 	private static final String URL_CREATE_RECORD =
-	            "http://biometric.elasticbeanstalk.com/FrontController?action=activeid";
-	    
+	//            "http://biometric.elasticbeanstalk.com/FrontController?action=activeid";
+    "https://obrienlabs.dev/rest-json.html";
+    
 	public static void restCall() {		
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(URL_CREATE_RECORD))
 				.GET()
 				.build();
-// async
-		//		HttpRequest request = HttpRequest.newBuilder()
-//			        .uri(URI.create("https://foo.com/"))
-//			        .timeout(Duration.ofMinutes(2))
-//			        .header("Content-Type", "application/json")
-//			        .POST(BodyPublishers.ofFile(Paths.get("file.json")))
-//			        .build();	
+
 		
 	//HttpClient client = HttpClient.newBuilder().build();
 	HttpClient client = HttpClient.newBuilder()
@@ -53,6 +49,7 @@ public class RestClient {
 	try {
 		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 		String body = response.body();
+		logger.info("Request : " + URL_CREATE_RECORD);
 		logger.info("Response: " + body);
 		   
 		System.out.println(response.statusCode());
@@ -71,4 +68,14 @@ public class RestClient {
         RestClient app = new RestClient();
         app.restCall();
     }
+    
+    /*
+     * // async
+		//		HttpRequest request = HttpRequest.newBuilder()
+//			        .uri(URI.create("https://foo.com/"))
+//			        .timeout(Duration.ofMinutes(2))
+//			        .header("Content-Type", "application/json")
+//			        .POST(BodyPublishers.ofFile(Paths.get("file.json")))
+//			        .build();	
+     */
 }
