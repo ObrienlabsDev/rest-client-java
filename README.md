@@ -31,8 +31,12 @@ INFO: Response: { "id" : 202311035}
 
 
 With a proxy on your local DC
- java -Dhttp.proxyHost=1.2.3.4 -Dhttp.proxyPort=8192 -cp rest-client-java-1.0-SNAPSHOT.jar dev.obrienlabs.RestClient
 
+# http
+java -Dhttp.proxyHost=1.2.3.4 -Dhttp.proxyPort=8192 -cp rest-client-java-1.0-SNAPSHOT.jar dev.obrienlabs.RestClient
+
+# https
+java -Dhtts.proxyHost=1.2.3.4 -Dhttps.proxyPort=8192 -cp rest-client-java-1.0-SNAPSHOT.jar dev.obrienlabs.RestClient
 
 
 
