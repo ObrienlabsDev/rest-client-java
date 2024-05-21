@@ -1,4 +1,5 @@
 //package dev.obrienlabs;
+// moved to https://github.com/ObrienlabsDev/biometric-gcp-functions/issues/1
 
 package gcfv2;
 
